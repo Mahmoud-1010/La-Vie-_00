@@ -1,17 +1,17 @@
 const mongoose = require("mongoose")
 
-const plantSchema = mongoose.Schema({
+const productSchema = mongoose.Schema({
     storeId:{
         type:mongoose.Schema.Types.ObjectId,
         // required:true
     },
-    plantName:{
+    productName:{
         type:String
     },
-    plantDescription:{
+    productDescription:{
         type:String
     },
-    plantImg:{
+    productImg:{
         type:String
     },
     noOfAvailableCopy:{
@@ -22,5 +22,5 @@ const plantSchema = mongoose.Schema({
         enum:['beginner','advanced','professional']
     }
 })
-const Plant =  mongoose.model("Plant",plantSchema)
-module.exports=Plant
+const Product =  mongoose.model("Product",productSchema)
+module.exports=Product

@@ -80,14 +80,15 @@ const userSchema = mongoose.Schema({
     discount:{
         type:Number
     },
-    bookmarkPlants:[{
+    bookmarkProducts:[{
         type:mongoose.Schema.Types.ObjectId,
     }],
     bookmarkBlogs:[{
         type:mongoose.Schema.Types.ObjectId,
     }],
-    shoppingCarts:[{
-        type:Object,
+    shoppingCart:[{
+        type:mongoose.Schema.Types.ObjectId,
+        
     }], 
     tokens:[{
         token:{ type:String, required: true}

@@ -59,7 +59,6 @@ class User{
             myHelper.resHandler(res, 500, false, e, e.message)
         }
     }
-    
     static bookmarkBlog = async(req,res)=>{
         try{
             // const blog = await blogModel.findOne({_id:req.params.id})
@@ -72,11 +71,11 @@ class User{
             myHelper.resHandler(res, 500, false, e, e.message)
         }
     }
-    static bookmarkPlant = async(req,res)=>{
+    static bookmarkProduct = async(req,res)=>{
         try{
             // const blog = await blogModel.findOne({_id:req.params.id})
             const userData = req.user
-            userData.bookmarkPlants.push(req.params.id)
+            userData.bookmarkProducts.push(req.params.id)
             await userData.save()
             myHelper.resHandler(res, 500, true, userData, "your single blog")
         }
@@ -84,6 +83,67 @@ class User{
             myHelper.resHandler(res, 500, false, e, e.message)
         }
     }
+    static removeBlogFromBookmark = async(req,res)=>{
+        try{
+            // const blog = await blogModel.findOne({_id:req.params.id})
+            const userData = req.user
+            var index = userData.bookmarkBlogs.indexOf(req.params.id);
+            if (index !== -1) {
+                userData.bookmarkBlogs.splice(index, 1);
+            }
+            // userData.shoppingCartsProducts.push(req.params.id)
+            await userData.save()
+            myHelper.resHandler(res, 500, true, userData, "your single blog")
+        }
+        catch(e){
+            myHelper.resHandler(res, 500, false, e, e.message)
+        }
+    }
+    static removeProductFromBookmark = async(req,res)=>{
+        try{
+            // const blog = await blogModel.findOne({_id:req.params.id})
+            const userData = req.user
+            var index = userData.bookmarkProducts.indexOf(req.params.id);
+            if (index !== -1) {
+                userData.bookmarkProducts.splice(index, 1);
+            }
+            // userData.shoppingCartsProducts.push(req.params.id)
+            await userData.save()
+            myHelper.resHandler(res, 500, true, userData, "your single blog")
+        }
+        catch(e){
+            myHelper.resHandler(res, 500, false, e, e.message)
+        }
+    }
+    static addProductToShoppingCart = async(req,res)=>{
+        try{
+            // const blog = await blogModel.findOne({_id:req.params.id})
+            const userData = req.user
+            userData.shoppingCart.push(req.params.id)
+            await userData.save()
+            myHelper.resHandler(res, 500, true, userData, "your single blog")
+        }
+        catch(e){
+            myHelper.resHandler(res, 500, false, e, e.message)
+        }
+    }
+    static deleteProductFromShoppingCart = async(req,res)=>{
+        try{
+            // const blog = await blogModel.findOne({_id:req.params.id})
+            const userData = req.user
+            var index = userData.shoppingCart.indexOf(req.params.id);
+            if (index !== -1) {
+                userData.shoppingCart.splice(index, 1);
+            }
+            // userData.shoppingCartsProducts.push(req.params.id)
+            await userData.save()
+            myHelper.resHandler(res, 500, true, userData, "your single blog")
+        }
+        catch(e){
+            myHelper.resHandler(res, 500, false, e, e.message)
+        }
+    }
+
     
 
 

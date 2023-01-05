@@ -6,6 +6,6 @@ router.post("/addStore",auth,Store.addStore)
 
 //plants routes
 
-router.post("/addPlant",auth,Store.addPlant)
+router.post("/addProduct",auth,Store.addProduct)
 
 module.exports = router
