@@ -14,7 +14,16 @@ class Store{
                 ...req.body
             })
             await productData.save()
-            myHelper.resHandler(res, 200, true, productData, 'plant added successfully')
+            await myHelper.resHandler(res, 200, true, productData, 'plant added successfully')
+        }
+        catch(e){
+            myHelper.resHandler(res, 500, false, e, e.message)
+        }
+    }
+    static removeProduct = async(req,res)=>{
+        try{
+            const productData = await productModel.findOneAndDelete({_id:req.params.id})
+             await myHelper.resHandler(res, 200, true, productData, 'your product is deleted')
         }
         catch(e){
             myHelper.resHandler(res, 500, false, e, e.message)

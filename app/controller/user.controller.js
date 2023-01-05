@@ -1,5 +1,6 @@
 const userModel = require("../../db/models/user.model")
 const storeModel = require("../../db/models/store.model")
+const productModel = require("../../db/models/product.model")
 const myHelper = require("../helper")
 const jwt  = require("jsonwebtoken")
 class User{
@@ -61,7 +62,6 @@ class User{
             myHelper.resHandler(res, 500, false, e, e.message)
         }
     }
-
 
     static addStore = async(req,res)=>{
         try{
@@ -157,6 +157,24 @@ class User{
             // userData.shoppingCartsProducts.push(req.params.id)
             await userData.save()
             myHelper.resHandler(res, 500, true, userData, "your single blog")
+        }
+        catch(e){
+            myHelper.resHandler(res, 500, false, e, e.message)
+        }
+    }
+    static getAllProducts = async(req,res)=>{
+        try{
+            const productData = productModel.find()
+            await myHelper.resHandler(res, 500, true, productData, "your all product")
+        }
+        catch(e){
+            myHelper.resHandler(res, 500, false, e, e.message)
+        }
+    }
+    static getProductReview = async(req,res)=>{
+        try{
+            const productData = productModel.findOne({_id:req.params.id})
+            await myHelper.resHandler(res, 500, true, productData, "your single product")
         }
         catch(e){
             myHelper.resHandler(res, 500, false, e, e.message)

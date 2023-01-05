@@ -20,7 +20,14 @@ const productSchema = mongoose.Schema({
     qualificationLevel:{
         type:String,
         enum:['beginner','advanced','professional']
-    }
+    },
+    reviews:[{
+        userName:{type:String},
+        date:{type:String},
+        rate:{type:Number},
+        review:{type:String}
+    
+    }],
 })
 const Product =  mongoose.model("Product",productSchema)
 module.exports=Product

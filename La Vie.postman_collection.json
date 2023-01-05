@@ -1,0 +1,887 @@
+{
+	"info": {
+		"_postman_id": "95133fa5-5f7b-4eff-8642-70dd1dc0e8a1",
+		"name": "La Vie",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23279088"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "bookmark",
+					"item": [
+						{
+							"name": "bookmarkBlog",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I2YjQ2MTAwNmU0ZGFlMDhjZjkzNzQiLCJpYXQiOjE2NzI5MTgxMjd9.SySmOWVIPsfRfybiQMAL6mFhnxPCElAFuUc80_-KXxA",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/user/bookmarkBlog/63b5b37e7c2f7956afaa96e2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"bookmarkBlog",
+										"63b5b37e7c2f7956afaa96e2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "bookmarkproduct",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I2YjQ2MTAwNmU0ZGFlMDhjZjkzNzQiLCJpYXQiOjE2NzI5MTgxMjd9.SySmOWVIPsfRfybiQMAL6mFhnxPCElAFuUc80_-KXxA",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/user/bookmarkProduct/63b5b8046afb8775d3d4f3ec",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"bookmarkProduct",
+										"63b5b8046afb8775d3d4f3ec"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "removeBlogFromBookmark",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I2YjQ2MTAwNmU0ZGFlMDhjZjkzNzQiLCJpYXQiOjE2NzI5MTgxMjd9.SySmOWVIPsfRfybiQMAL6mFhnxPCElAFuUc80_-KXxA",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/user/removeBlogFromBookmark/63b5b37e7c2f7956afaa96e2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"removeBlogFromBookmark",
+										"63b5b37e7c2f7956afaa96e2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "removeProductFromBookmark",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I2YjQ2MTAwNmU0ZGFlMDhjZjkzNzQiLCJpYXQiOjE2NzI5MTgxMjd9.SySmOWVIPsfRfybiQMAL6mFhnxPCElAFuUc80_-KXxA",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/user/removeProductFromBookmark/63b5b8046afb8775d3d4f3ec",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"removeProductFromBookmark",
+										"63b5b8046afb8775d3d4f3ec"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "authentication",
+					"item": [
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fName\":\"regularUser\",\r\n    \"lName\":\"user_4\",\r\n    \"email\":\"regularUser@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/user/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"regularUser@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "logout",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2IyNTkyMWU1ZTA3YWJkOGZkNmRlOGUiLCJpYXQiOjE2NzI2MzI2MTl9.aCN3-RT_FlDFxN7wbdhLmnjXCYzcBiLg_nil4NGtPkY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/user/logout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "loginWithSocialMedia",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/user/loginWithSocialMedia",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"loginWithSocialMedia"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "forgetPassword",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "learnMoreAboutWebsite",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "contactUs",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "profile info",
+					"item": [
+						{
+							"name": "addQualification",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I2YzI0OTJjYmU1NDdkNjAzNmMwNzUiLCJpYXQiOjE2NzI5MjE2ODV9.itlG9ugee9Qz3CrdSfsedCuM8wEjYQtl9_k_Jrf_NL4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"qualification\":\"advanced\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/user/addQualification",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"addQualification"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "editData",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I2YzI0OTJjYmU1NDdkNjAzNmMwNzUiLCJpYXQiOjE2NzI5MjE2ODV9.itlG9ugee9Qz3CrdSfsedCuM8wEjYQtl9_k_Jrf_NL4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fName\":\"regularUser\",\r\n    \"lName\":\"user_4_edited1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/user/editProfileData",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"editProfileData"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "shopping carts",
+					"item": [
+						{
+							"name": "add product to shopping carts",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I2YjQ2MTAwNmU0ZGFlMDhjZjkzNzQiLCJpYXQiOjE2NzI5MTgxMjd9.SySmOWVIPsfRfybiQMAL6mFhnxPCElAFuUc80_-KXxA",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/user/addProductToShoppingCart/63b6b330cef066c8319325fc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"addProductToShoppingCart",
+										"63b6b330cef066c8319325fc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete product from shopping carts",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I2YjQ2MTAwNmU0ZGFlMDhjZjkzNzQiLCJpYXQiOjE2NzI5MTgxMjd9.SySmOWVIPsfRfybiQMAL6mFhnxPCElAFuUc80_-KXxA",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/user/deleteProductFromShoppingCart/63b6b330cef066c8319325fc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"deleteProductFromShoppingCart",
+										"63b6b330cef066c8319325fc"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "become a partner",
+					"item": [
+						{
+							"name": "addNewStore / be come a partner Copy",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I2YzIyYTc1YWQ3NzE1ZjU2YWE1YjAiLCJpYXQiOjE2NzI5MjE2OTN9.wvpx17CC01lOC1Qxls3s79d3hy5hzxzHpypkTKmfa90",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"storeName\":\"flower\",\r\n    \"noOfBranches\":\"5\",\r\n    \"storeType\":\"sell seeds\",\r\n    \"contactRole\":\"manager\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/user/addStore",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"addStore"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "review product or blog",
+					"item": [
+						{
+							"name": "getProductReviews",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "superAdmin",
+			"item": [
+				{
+					"name": "addAdmin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I2YzFjMjc1YWQ3NzE1ZjU2YWE1YTQiLCJpYXQiOjE2NzI5MjE1NDJ9.Gf5OKTD1QdDyGvdISW15XkBRRsC1vGnNzaYOtccGYWQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/superAdmin/addAdmin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"superAdmin",
+								"addAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeAdmin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I2YzFjMjc1YWQ3NzE1ZjU2YWE1YTQiLCJpYXQiOjE2NzI5MjE1NDJ9.Gf5OKTD1QdDyGvdISW15XkBRRsC1vGnNzaYOtccGYWQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/superAdmin/removeAdmin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"superAdmin",
+								"removeAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add url",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I2YzFjMjc1YWQ3NzE1ZjU2YWE1YTQiLCJpYXQiOjE2NzI5MjE1NDJ9.Gf5OKTD1QdDyGvdISW15XkBRRsC1vGnNzaYOtccGYWQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"urlApi\":\"/addUrl\",\r\n    \"urlMethods\":\"\",\r\n    \"roles\":[\"superAdmin\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/superAdmin/addUrl",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"superAdmin",
+								"addUrl"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "activatePartner",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I2YzFkZjc1YWQ3NzE1ZjU2YWE1YWEiLCJpYXQiOjE2NzI5MjE1ODB9.XzlWjauPAtbzJQVxq7kqTefzSU7pr99RGqT85rmfbgU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/admin/activatePartner/63b6db6cf5451b788a6ed58d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"activatePartner",
+								"63b6db6cf5451b788a6ed58d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removePartner",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I2YzFkZjc1YWQ3NzE1ZjU2YWE1YWEiLCJpYXQiOjE2NzI5MjE1ODB9.XzlWjauPAtbzJQVxq7kqTefzSU7pr99RGqT85rmfbgU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/admin/removePartner/63b6db6cf5451b788a6ed58d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"removePartner",
+								"63b6db6cf5451b788a6ed58d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "blog",
+			"item": [
+				{
+					"name": "addBlog",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I1YjMyZTdjMmY3OTU2YWZhYTk2ZDgiLCJpYXQiOjE2NzI4NTIyNzh9.-xaQzGTZw3-zfmmZRtFHfuNmTWdHwiF1u1dxc0kjacA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"blogType\":\"txt\",\r\n    \"content\":\"blog_1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/blog/addBlog",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"blog",
+								"addBlog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteBlog",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2IyNTkyMWU1ZTA3YWJkOGZkNmRlOGUiLCJpYXQiOjE2NzI2MzI2MTl9.aCN3-RT_FlDFxN7wbdhLmnjXCYzcBiLg_nil4NGtPkY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/blog/deleteBlog/63b4736f3ac78c9ebd17c642",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"blog",
+								"deleteBlog",
+								"63b4736f3ac78c9ebd17c642"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editBlog",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I1YjMyZTdjMmY3OTU2YWZhYTk2ZDgiLCJpYXQiOjE2NzI4NTIyNzh9.-xaQzGTZw3-zfmmZRtFHfuNmTWdHwiF1u1dxc0kjacA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"blogType\":\"txt\",\r\n    \"content\":\"blog_3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/blog/editBlog/63b5b37e7c2f7956afaa96e2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"blog",
+								"editBlog",
+								"63b5b37e7c2f7956afaa96e2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllBlogs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/blog/getAllBlogs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"blog",
+								"getAllBlogs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSingleBlog",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/blog/getSingleBlog/63b5b37e7c2f7956afaa96e2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"blog",
+								"getSingleBlog",
+								"63b5b37e7c2f7956afaa96e2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Store",
+			"item": [
+				{
+					"name": "product",
+					"item": [
+						{
+							"name": "addProduct",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I2YzIyYTc1YWQ3NzE1ZjU2YWE1YjAiLCJpYXQiOjE2NzI5MjE2OTN9.wvpx17CC01lOC1Qxls3s79d3hy5hzxzHpypkTKmfa90",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productName\":\"flower\",\r\n    \"noOfAvailableCopy\":\"12\",\r\n    \"qualificationLevel\":\"beginner\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/store/addProduct",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"store",
+										"addProduct"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "removeProduct",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}

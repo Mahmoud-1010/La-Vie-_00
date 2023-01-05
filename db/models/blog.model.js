@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-const Blog = mongoose.model("Blog", {
+const blogSchema = mongoose.Schema( {
     userId:{
         type:mongoose.Schema.Types.ObjectId,
         required: true,
@@ -36,8 +36,11 @@ const Blog = mongoose.model("Blog", {
         rate:{type:Number},
         review:{type:String}
     
-    }]
-
-
+    }],
+    rate:{
+        type:Number
+    }
 })
+const Blog = mongoose.model("Blog",blogSchema)
+
 module.exports=Blog

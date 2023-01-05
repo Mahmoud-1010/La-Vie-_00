@@ -8,7 +8,7 @@ class SuperAdmin{
             const userData  = await userModel.findOne({email:req.body.email})
             userData.role='admin'
             await userData.save()
-            myHelper.resHandler(res, 200, true, userData, `you have added ${userData.fName} ${userData.lName} to admins`)
+            await myHelper.resHandler(res, 200, true, userData, `you have added ${userData.fName} ${userData.lName} to admins`)
 
         }
         catch(e){
@@ -20,7 +20,7 @@ class SuperAdmin{
             const userData  = await userModel.findOne({email:req.body.email})
             userData.role='regularUser'
             await userData.save()
-            myHelper.resHandler(res, 200, true, userData, `you have removed ${userData.fName} ${userData.lName} from admins`)
+            await myHelper.resHandler(res, 200, true, userData, `you have removed ${userData.fName} ${userData.lName} from admins`)
 
         }
         catch(e){
@@ -39,7 +39,7 @@ class SuperAdmin{
                 ...req.body
             })
             await urlData.save()
-            myHelper.resHandler(res, 200, true, urlData, `you have add new url ${urlData.urlApi}`)
+            await myHelper.resHandler(res, 200, true, urlData, `you have add new url ${urlData.urlApi}`)
 
         }
         catch(e){

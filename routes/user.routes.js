@@ -22,4 +22,8 @@ router.post("/editProfileData",auth,User.editProfileData)
 
 router.post("/addProductToShoppingCart/:id",auth,User.addProductToShoppingCart)
 router.post("/deleteProductFromShoppingCart/:id",auth,User.deleteProductFromShoppingCart)
+
+
+router.get("/getProductReview/:id",auth,User.getProductReview)
+
 module.exports = router
