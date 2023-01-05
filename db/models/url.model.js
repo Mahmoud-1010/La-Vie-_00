@@ -19,7 +19,7 @@ const urlSchema = mongoose.Schema({
         {
             type:String,
             enum:['superAdmin','admin','regularUser','partner'],
-        },
+        }
     ]
 })
 

@@ -5,7 +5,6 @@ class SuperAdmin{
 
     static addAdmin = async(req,res)=>{
         try{
-            if(!req.user.role=='superAdmin') throw new Error("you cannot do this proccess")
             const userData  = await userModel.findOne({email:req.body.email})
             userData.role='admin'
             await userData.save()
@@ -18,7 +17,6 @@ class SuperAdmin{
     }
     static removeAdmin = async(req,res)=>{
         try{
-            if(!req.user.role=='superAdmin') throw new Error("you cannot do this proccess")
             const userData  = await userModel.findOne({email:req.body.email})
             userData.role='regularUser'
             await userData.save()

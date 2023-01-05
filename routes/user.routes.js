@@ -1,5 +1,5 @@
 const router = require("express").Router()
-const {auth} = require("../app/middleware/auth.middleware")
+const {auth, getPermissioon} = require("../app/middleware/auth.middleware")
 const User = require("../app/controller/user.controller")
 
 router.post("/register", User.register)
@@ -9,6 +9,7 @@ router.post("/logout",auth, User.logout)
 
 router.post("/addQualification",auth,User.addQualification)
 
+router.post("/addStore",auth,getPermissioon,User.addStore)
 
 router.post("/bookmarkBlog/:id",auth,User.bookmarkBlog)
 router.post("/bookmarkproduct/:id",auth,User.bookmarkProduct)

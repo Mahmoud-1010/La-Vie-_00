@@ -53,12 +53,31 @@ class User{
     }
     static editProfileData = async(req,res)=>{
         try{
+            const userData =await userModel.findOneAndUpdate({"tokens.token": req.token},{...req.body})
+            await userData.save()
             myHelper.resHandler(res, 200, true, userData,  'edited')
         }
         catch(e){
             myHelper.resHandler(res, 500, false, e, e.message)
         }
     }
+
+
+    static addStore = async(req,res)=>{
+        try{
+            const storeData = new storeModel({
+                ownerId:req.user._id,
+                ...req.body
+            })
+            await storeData.save()
+            myHelper.resHandler(res, 200, true, storeData, 'your data are saved our team will contact you through 3 days')
+        }
+        catch(e){
+            myHelper.resHandler(res, 500, false, e, e.message)
+        }
+    }
+
+
     static bookmarkBlog = async(req,res)=>{
         try{
             // const blog = await blogModel.findOne({_id:req.params.id})

@@ -1,10 +1,9 @@
 const mongoose = require("mongoose")
 
 const storeSchema = mongoose.Schema({
-    userId:{
+    ownerId:{
         type:mongoose.Schema.Types.ObjectId,
         required: true,
-        ref:"User"
     },
     storeName:{
         type:String
@@ -23,13 +22,7 @@ const storeSchema = mongoose.Schema({
         {
             type:String
         }
-    ], 
-    firstName:{
-        type:String
-    },
-    lastName:{
-        type:String
-    },
+    ],
     phoneNum:{
         type: String,
         validate(value){
@@ -42,22 +35,6 @@ const storeSchema = mongoose.Schema({
         enum:['active','non active'],
         default:'non active'
     }, 
-    // email:{
-    //     type:String, 
-    //     trim:true,
-    //     lowercase:true,
-    //     required:true,
-    //     unique: true,
-    //     validate(value){
-    //         if(!validator.isEmail(value)){
-    //             throw new Error("invalid email format")
-    //         }
-    //     }
-    // },
-    contactRole:{
-        type:String,
-        enum:['owner','co owner','manager','employee']
-    }
 })
 
 const Store = mongoose.model("Store", storeSchema)

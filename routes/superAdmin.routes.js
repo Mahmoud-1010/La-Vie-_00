@@ -1,8 +1,8 @@
 const router = require("express").Router()
-const { auth } = require("../app/middleware/auth.middleware")
+const { auth, getPermissioon } = require("../app/middleware/auth.middleware")
 const SuperAdmin = require('../app/controller/superAdmin.controller')
 
-router.post("/addAdmin",auth,SuperAdmin.addAdmin)
-router.post("/removeAdmin",auth,SuperAdmin.removeAdmin)
-router.post("/addUrl",auth,SuperAdmin.addUrl)
+router.post("/addAdmin",auth,getPermissioon,SuperAdmin.addAdmin)
+router.post("/removeAdmin",auth,getPermissioon,SuperAdmin.removeAdmin)
+router.post("/addUrl",auth,getPermissioon,SuperAdmin.addUrl)
 module.exports = router

@@ -74,7 +74,7 @@ const userSchema = mongoose.Schema({
     },
     role:{
         type:String,
-        enum:['superAdmin','admin','regularUser','partner'],
+        enum:['superAdmin','admin','partner','regularUser'],
         default:'regularUser'
     },
     discount:{
